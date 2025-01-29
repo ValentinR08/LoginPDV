@@ -1,15 +1,6 @@
-// Ejemplo: Iniciar o detener la animación al hacer clic en la escena
-const scene = document.querySelector('.scene');
+const cashRegister = document.querySelector('.cash-register');
+const drawer = document.querySelector('.cash-register .drawer');
 
-scene.addEventListener('click', () => {
-    const leftArm = document.querySelector('.left-arm');
-    const rightArm = document.querySelector('.right-arm');
-
-    if (leftArm.style.animationPlayState === 'paused') {
-        leftArm.style.animationPlayState = 'running';
-        rightArm.style.animationPlayState = 'running';
-    } else {
-        leftArm.style.animationPlayState = 'paused';
-        rightArm.style.animationPlayState = 'paused';
-    }
+cashRegister.addEventListener('click', () => {
+    drawer.classList.toggle('open');
 });

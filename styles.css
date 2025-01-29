@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /* Estilos generales */
 body {
     margin: 0;
@@ -8,100 +7,190 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-   
- background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
- background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
     overflow: hidden;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-}
-.container div h1{
-    color: black;
-    font-family: "Inter", serif;
-    font-size: 90px;
-    font-weight: 900;
-    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 /* Escena */
 .scene {
     position: relative;
-    width: 300px;
-    height: 100px;
-    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Cajero */
 .cashier {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 150px;
+    width: 100px;
+    height: 200px;
 }
 
 /* Cabeza del cajero */
 .cashier .head {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-color: #ffcc99;
     border-radius: 50%;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Cuerpo del cajero */
-.cashier .body {
-    width: 60px;
-    height: 80px;
-    background-color: #4CAF50;
+/* Ojos del cajero */
+.cashier .eye {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+}
+
+.cashier .left-eye {
+    left: 15px;
+}
+
+.cashier .right-eye {
+    right: 15px;
+}
+
+/* Boca del cajero */
+.cashier .mouth {
+    width: 20px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 2px;
     position: absolute;
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Cuerpo del cajero */
+.cashier .body {
+    width: 80px;
+    height: 100px;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Camisa del cajero */
+.cashier .shirt {
+    width: 60px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
 }
 
 /* Brazos del cajero */
 .cashier .arm {
     width: 20px;
-    height: 60px;
+    height: 80px;
     background-color: #4CAF50;
     position: absolute;
-    top: 40px;
+    top: 60px;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Brazo izquierdo */
 .cashier .left-arm {
     left: -20px;
     transform-origin: top center;
     animation: moveLeftArm 1s infinite alternate;
 }
 
-/* Brazo derecho */
 .cashier .right-arm {
     right: -20px;
     transform-origin: top center;
     animation: moveRightArm 1s infinite alternate;
 }
 
-/* Caja registradora */
-.cash-register {
-    width: 100px;
-    height: 80px;
-    background-color: #666;
+/* Manos del cajero */
+.cashier .hand {
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc99;
+    border-radius: 50%;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Caja registradora */
+.cash-register {
+    width: 120px;
+    height: 100px;
+    background-color: #666;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Pantalla de la caja registradora */
+.cash-register .display {
+    width: 80px;
+    height: 20px;
+    background-color: #aaffaa;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones de la caja registradora */
+.cash-register .buttons {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.cash-register .button {
+    width: 15px;
+    height: 15px;
+    background-color: #444;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Cajón de la caja registradora */
+.cash-register .drawer {
+    width: 100px;
+    height: 10px;
+    background-color: #555;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Animaciones */
@@ -121,4 +210,8 @@ body {
     100% {
         transform: rotate(-20deg);
     }
+}
+.cash-register .drawer.open {
+    transform: translate(-50%, -20px);
+    transition: transform 0.3s ease;
 }
