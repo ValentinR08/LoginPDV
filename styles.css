@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+   
+ background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+ background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+.container div h1{
+    color: black;
+    font-family: "Inter", serif;
+    font-size: 90px;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* Escena */
+.scene {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+/* Cajero */
+.cashier {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 150px;
+}
+
+/* Cabeza del cajero */
+.cashier .head {
+    width: 40px;
+    height: 40px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cuerpo del cajero */
+.cashier .body {
+    width: 60px;
+    height: 80px;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+/* Brazos del cajero */
+.cashier .arm {
+    width: 20px;
+    height: 60px;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 40px;
+    border-radius: 10px;
+}
+
+/* Brazo izquierdo */
+.cashier .left-arm {
+    left: -20px;
+    transform-origin: top center;
+    animation: moveLeftArm 1s infinite alternate;
+}
+
+/* Brazo derecho */
+.cashier .right-arm {
+    right: -20px;
+    transform-origin: top center;
+    animation: moveRightArm 1s infinite alternate;
+}
+
+/* Caja registradora */
+.cash-register {
+    width: 100px;
+    height: 80px;
+    background-color: #666;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+/* Animaciones */
+@keyframes moveLeftArm {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes moveRightArm {
+    0% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
