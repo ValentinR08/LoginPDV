@@ -1,3 +1,4 @@
+
 /* Estilos generales */
 body {
     margin: 0;
@@ -14,11 +15,12 @@ body {
 /* Escena */
 .scene {
     position: relative;
-    width: 400px;
+    width: 600px;
     height: 400px;
     background-color: #e0e0e0;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 /* Cajero */
@@ -29,6 +31,7 @@ body {
     transform: translateX(-50%);
     width: 100px;
     height: 200px;
+    z-index: 2;
 }
 
 /* Cabeza del cajero */
@@ -145,6 +148,7 @@ body {
     transform: translateX(-50%);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 /* Pantalla de la caja registradora */
@@ -193,6 +197,46 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Banda de productos */
+.conveyor-belt {
+    width: 40%;
+    height: 50px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: 0;
+    Right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    /*animation: moveBelt 10s linear infinite;*/
+}
+
+/* Productos en la banda */
+.product{
+    width: 40px;
+    height: 40px;
+    background-color: #ff5733;
+    border-radius: 10px;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.conveyor-belt .product{
+    animation: moveproduct 10s linear infinite;
+}
+.table{
+    width: 40%;
+    height: 50px;
+    background-color: burlywood;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
 /* Animaciones */
 @keyframes moveLeftArm {
     0% {
@@ -211,7 +255,12 @@ body {
         transform: rotate(-20deg);
     }
 }
-.cash-register .drawer.open {
-    transform: translate(-50%, -20px);
-    transition: transform 0.3s ease;
+
+@keyframes moveproduct {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
