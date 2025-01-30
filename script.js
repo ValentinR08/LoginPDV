@@ -1,7 +1,19 @@
 const table = document.querySelector('.table');
 const belt = document.querySelector('.conveyor-belt');
+const btn_Log_in = document.querySelector('#btn_Log-in');
+const login = document.querySelector('.login');
+const close = document.querySelector('#btn_close');
+const scene = document.querySelector('.scene');
 
+close.addEventListener('click',()=>{
+    login.style.display = 'none';
+    scene.style.display = 'block';
+})
 
+btn_Log_in.addEventListener('click',()=>{
+    scene.style.display = 'none';
+    login.style.display = 'block';
+})
 function addProduct(){
     let newProduct = document.createElement('div');
     newProduct.classList.add('product');
@@ -25,9 +37,6 @@ function engineProduct() {
         },i*10000);   
     }
 
-    setTimeout(() => {
-        engineProduct();
-    }, 4 * 20000);
 }
 
 engineProduct();
